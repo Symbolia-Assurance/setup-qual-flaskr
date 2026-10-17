@@ -1,0 +1,55 @@
+{
+  "app_objects": [
+    {
+      "factory": "create_app",
+      "module": "flaskr",
+      "name": "app"
+    },
+    {
+      "module": "flaskr.auth",
+      "name": "bp"
+    },
+    {
+      "module": "flaskr.blog",
+      "name": "bp"
+    }
+  ],
+  "app_roots": [
+    "flaskr"
+  ],
+  "elevation_writers": [],
+  "execution_authorized": false,
+  "guards": [
+    {
+      "decorator": "login_required",
+      "definition": "flaskr.auth.login_required",
+      "g_attr": "user",
+      "key": "user_id",
+      "loader": "flaskr.auth.load_logged_in_user",
+      "requires": "g_identity_present"
+    }
+  ],
+  "hardware_authorized": false,
+  "id": "flask-6fc38754f80e",
+  "identity_writers": [
+    "flaskr.auth.login"
+  ],
+  "idiom": "flask-session-decorator",
+  "industrial_release_authorized": false,
+  "instance_config": "constants-only",
+  "language": "python",
+  "libraries": [
+    "click"
+  ],
+  "physical_validation": false,
+  "public_routes": [],
+  "registrations_complete": true,
+  "release_allowed": false,
+  "schema": "assure.python-auth.declaration/v1",
+  "self_approved": false,
+  "session_identity_key": "user_id",
+  "signout_views": [
+    "flaskr.auth.logout"
+  ],
+  "simulation": true
+}
